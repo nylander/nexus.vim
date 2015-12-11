@@ -9,6 +9,7 @@
 "               'Hompart partition=genes ...'.
 "               Allow shortest unambiguous math of keywords. E.g.,
 "               '[exe]cute'. Possible?
+"               Handle nested comments. E.g. '[begin [w] data;]'.
 "               
 
 if version < 600
