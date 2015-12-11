@@ -2,13 +2,23 @@
 " Language:	Nexus file format with some reserved words for MrBayes
 " Maintainer:	Luis Carvalho <lexcarvalho@hotmail.com>
 " Last Change:	12/11/2015 03:00:06 PM (nylander)
-" TODO:         Handle 'prset brlenspr=clock:fossilization;'
+" TODO:         Handle keywords separated by colonr. E.g., 'gene:1-3',
+"               or 'brlenspr=clock:fossilization'.
+"               Handle same word as both Command/Parameter/Option.
+"               E.g., 'Partition name = 2: ...', and
+"               'Hompart partition=genes ...'.
+"               Allow shortest unambiguous math of keywords. E.g.,
+"               '[exe]cute'. Possible?
+"               
 
 if version < 600
 	syntax clear
 elseif exists("b:current_syntax")
 	finish
 endif
+
+" Ignore case
+syn case ignore
 
 " Public blocks
 syn keyword	nexusBlock	begin end endblock
